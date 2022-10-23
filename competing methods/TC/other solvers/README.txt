@@ -1,0 +1,2 @@
+This file contains many related low-rank and smooth induced tensor completion model solvers via ADMM, writen by Hailin Wang, 2022.
+Note that there exists difference between this file and the 'TCTV' file,  where here only consider 3D tensor data, while the 'TCTV' file can be used for any high-order tensor data.
