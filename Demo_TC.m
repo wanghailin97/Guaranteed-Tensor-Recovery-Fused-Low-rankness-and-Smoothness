@@ -373,6 +373,7 @@ if Run_TCTV
     % use the recommended parameters from its released code 
     % see the TCTV_TC.m or Demo.m in TCTV file
     opts = [];
+    opts.directions = [1 2]; % for images, [1 2]; for HSI, [1 2 3]
     tic
     Results{i} = TCTV_TC(Obs, Omega, opts);
     Time(i) = toc;
