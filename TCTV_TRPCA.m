@@ -40,7 +40,7 @@ for i = 3:d
 transform_matrices{i-2} = dftmtx(dim(i)); 
 end
 lambda     = 1/sqrt(prod(dim)/min(dim(1),dim(2)));
-directions = 1:d; 
+directions = 1:2; 
 tol        = 1e-8; 
 max_iter   = 500;
 rho        = 1.1;
