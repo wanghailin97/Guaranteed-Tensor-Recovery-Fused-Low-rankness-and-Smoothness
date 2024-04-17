@@ -276,7 +276,7 @@ if Run_TCTV
     % use the recommended parameters from its released code 
     % see the TCTV_TRPCA.m in TCTV file
     opts = [];
-    opts.rho = 1.25;
+    opts.rho = 1.25; % larger rho makes the algorithm faster while lose the accuracy
     opts.directions = [1,2,3]; % consider the lowrankness and smoothness both along the spatial and spectral directions
     tic
     Results{i} = TCTV_TRPCA(Nhsi, opts);
