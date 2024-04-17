@@ -39,7 +39,7 @@ transform  = 'DFT';
 for i = 3:d
 transform_matrices{i-2} = dftmtx(dim(i)); 
 end
-directions = 1:d; 
+directions = 1:2; 
 tol        = 1e-8; 
 max_iter   = 500;
 rho        = 1.1;
