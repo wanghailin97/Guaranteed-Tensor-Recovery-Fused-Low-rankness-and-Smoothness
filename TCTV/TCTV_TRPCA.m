@@ -102,7 +102,7 @@ while iter<max_iter
             case 'DCT'
                 [G{index},tnn_G{index}] = prox_htnn_C(porder_diff(X,index)+Gamma{index}/mu,1/(n*mu));
             case 'other' % note: one need input the transform matrices
-                [G{index},tnn_G{index}] = prox_htnn_C(transform_matrices,porder_diff(X,index)+Gamma{index}/mu,1/(n*mu));
+                [G{index},tnn_G{index}] = prox_htnn_U(transform_matrices,porder_diff(X,index)+Gamma{index}/mu,1/(n*mu));
         end
     end
     
