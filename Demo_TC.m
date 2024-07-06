@@ -373,6 +373,8 @@ if Run_TCTV
     % use the recommended parameters from its released code 
     % see the TCTV_TC.m or Demo.m in TCTV file
     opts = [];
+    opts.transform = 'DCT'; 
+    % opts.transform = 'DFT'; % the DCT-based is usually better than the DFT-based
     opts.directions = [1 2]; % for images, [1 2]; for HSI, [1 2 3]
     tic
     Results{i} = TCTV_TC(Obs, Omega, opts);
