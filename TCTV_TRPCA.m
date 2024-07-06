@@ -1,4 +1,4 @@
-%----- Correlted Total Viariation based Tensor Robust Principle Component Analysis -----%
+%----- Tensor Correlted Total Viariation based Tensor Robust Principle Component Analysis -----%
 function [X, E, obj, err, iter] = TCTV_TRPCA(M, opts)
 % Solve the p-order Tensor Robust Principle Component Analysis via Tensor Correlted Total Viariation(TCTV) norm minimization by ADMM
 % the transform in high-order TSVD uses DFT (default)
