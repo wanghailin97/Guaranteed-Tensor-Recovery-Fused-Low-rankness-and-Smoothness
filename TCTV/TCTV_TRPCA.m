@@ -35,9 +35,9 @@ function [X, E, obj, err, iter] = TCTV_TRPCA(M, opts)
 dim = size(M);
 d   = ndims(M);
 
-transform  = 'DFT';
+transform  = 'DFT'; % use the DFT based TSVD by default
 for i = 3:d
-transform_matrices{i} = sqrt(dim(i+2))*dct(eye(dim(i+2))); 
+transform_matrices{i} = dftmtx(dim(i)); 
 end
 lambda     = 1/sqrt(prod(dim)/min(dim(1),dim(2)));
 directions = 1:d; 
