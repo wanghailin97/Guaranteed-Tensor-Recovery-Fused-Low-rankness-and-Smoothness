@@ -39,6 +39,10 @@ transform  = 'DFT';
 for i = 3:d
 transform_matrices{i-2} = dftmtx(dim(i)); 
 end
+% transform  = 'DCT'; % if use the DCT based TSVD
+% for i = 3:d
+%    transform_matrices{i-2} = sqrt(dim(i))*dct(eye(dim(i))); 
+% end
 lambda     = 1/sqrt(prod(dim)/min(dim(1),dim(2)));
 directions = 1:2; 
 tol        = 1e-8; 
