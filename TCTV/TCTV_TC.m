@@ -36,8 +36,14 @@ d   = ndims(M);
 
 transform  = 'DFT'; % use the DFT based TSVD by default
 for i = 3:d
-transform_matrices{i} = dftmtx(dim(i)); 
+transform_matrices{i-2} = dftmtx(dim(i)); 
 end
+
+% transform  = 'DCT'; % if use the DCT based TSVD
+% for i = 3:d
+%    transform_matrices{i-2} = sqrt(dim(i))*dct(eye(dim(i))); 
+% end
+
 directions = 1:2; % The smoothness of first two spatial dimensions is considered by default
 tol        = 1e-8; 
 max_iter   = 500;
